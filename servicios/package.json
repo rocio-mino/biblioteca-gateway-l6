@@ -1,0 +1,9 @@
+{
+  "name": "servicios",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "amqplib": "^2.2.0",
+    "jose": "^6.2.12"
+  }
+}
