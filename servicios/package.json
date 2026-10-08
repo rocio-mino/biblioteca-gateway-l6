@@ -4,6 +4,7 @@
   "type": "module",
   "dependencies": {
     "amqplib": "^2.2.0",
-    "jose": "^6.2.12"
+    "jose": "^6.2.12",
+    "pg": "^8.23.1"
   }
 }

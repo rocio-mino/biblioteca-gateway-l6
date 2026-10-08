@@ -6,7 +6,7 @@ import {
   UnauthorizedException,
 } from '@nestjs/common';
 import { verificar, tieneScope, estaEnGrupo } from './auth/verificador';
-
+const PRESTAMOS_URL = process.env.PRESTAMOS_URL ?? 'http://localhost:3002';
 /**
  * La pieza gemela de `libros.controller.ts`.
  *
@@ -37,7 +37,7 @@ export class PrestamosController {
       throw new ForbiddenException('te falta el grupo bibliotecarios');  // → 403
     }
 
-    const respuesta = await fetch('http://localhost:3002/prestamos');
+    const respuesta = await fetch(`${PRESTAMOS_URL}/prestamos`);
     return respuesta.json();
   }
 }
